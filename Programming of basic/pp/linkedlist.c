@@ -47,6 +47,18 @@ void insert_node(node_ptr head,int data){
     prev -> next = node ;
 }
 
+void delete_node(node_ptr head, int data){
+    if(head == NULL){
+        return ;
+    }
+    node_ptr trail = head ;
+    node_ptr prev = trail ;
+    while(trail -> data != data){
+        prev = trail;
+        trail = trail -> next ;
+    }
+}
+
 int main(){
     node_ptr head = NULL ;
 
