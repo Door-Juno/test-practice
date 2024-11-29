@@ -1,0 +1,5 @@
+apple 1000
+banana 2000
+kiwi 1500
+melon 1800
+blueberry 1200
