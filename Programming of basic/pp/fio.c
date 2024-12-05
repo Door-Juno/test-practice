@@ -26,7 +26,7 @@ int main(){
     fp = fopen("fruit.bin","rb");
     int head;
     fread(&head,sizeof(int),1,fp);
-    fseek(fp,sizeof(int)+sizeof(node_t)*head,SEEK_SET); // 기말 나옵니당~~~ sizeof(int)를 안더하려면, SEEK_CUR 하면 된다~
+    fseek(fp,sizeof(int)+sizeof(node_t)*head,SEEK_SET); // 기말 나옵니당~~~ sizeof(int)를 안더하려면, SEEK_CUR 
 //  fseek(fp,sizeof(node_t)*head,SEEK_CUR);
     node_t trail;
     fread(&trail,sizeof(node_t),1,fp);
@@ -38,4 +38,5 @@ int main(){
         printf("%s %d\n",trail.name,trail.price);
     }
     fclose(fp);
+
 }
